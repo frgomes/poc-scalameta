@@ -22,7 +22,7 @@ lazy val root = (project in file("."))
 lazy val macros = (project in file("macros"))
   .settings(commonSettings:_*)
   .settings(
-    libraryDependencies += "org.scalameta" %% "scalameta" % "1.1.0-SNAPSHOT")
+    libraryDependencies += "org.scalameta" %% "scalameta" % "1.0.0")
 
 lazy val tests = (project in file("tests"))
   .settings(commonSettings:_*)
