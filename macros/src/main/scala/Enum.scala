@@ -6,7 +6,6 @@ import scala.meta._
 class enum extends scala.annotation.StaticAnnotation {
   inline def apply(defn: Any) = meta {
     val q"""object $holder { ..$stats }""" = defn
-    //val q"""..$xs""" =
     val xs =
       stats.zipWithIndex.map {
         case (qq, idx) =>
