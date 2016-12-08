@@ -4,7 +4,7 @@ import scala.meta._
 
 @compileTimeOnly("@enum not expanded")
 class enum extends scala.annotation.StaticAnnotation {
-  inline def apply(defn: Any) = meta {
+  inline def apply(defn: Any): Any = meta {
     val q"""object $holder { ..$stats }""" = defn
     val xs =
       stats.zipWithIndex.map {
